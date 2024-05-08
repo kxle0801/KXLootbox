@@ -1,0 +1,6 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/kxle0801/KXLootbox
+build-by-default: true
+branches:
+- main
+projects: []
+...
