@@ -9,4 +9,4 @@
 | < 4.0   | :x:                |
 
 ## Reporting a Vulnerability
-
+[Contact Us](https://discord.gg/vhnRSH7k) (Our Discord Community)
