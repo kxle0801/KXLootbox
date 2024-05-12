@@ -90,7 +90,7 @@ lootbox-lore:
   - §r§7---
 ```
 
-## Command
+## Commands
 | **Command** | **Description** | **Permission** | **Aliases** | **Usage** |
 | --- | --- | --- | --- | --- |
 | `/kxleph` | `This executes KXLootbox plugin command.` | *`perm.kxbox.command`* | `[lootbox, kxlb, lb]` | `[create, give, delete, list]` |
