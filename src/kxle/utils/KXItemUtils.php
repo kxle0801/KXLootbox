@@ -47,7 +47,7 @@ final class KXItemUtils {
      * @param string $itemType
      * @param string $kxBoxName
      * @param integer $count
-     * @param array[] $lore
+     * @param array[] $lores
      * @param boolean $isGlint
      * @return Item|null
      */
