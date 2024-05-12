@@ -30,6 +30,7 @@ use kxle\KXLootbox;
 use kxle\utils\KXSourceUtils;
 
 use pocketmine\item\Item;
+use pocketmine\player\Player;
 use pocketmine\command\CommandSender;
 
 use CortexPE\Commando\BaseSubCommand;
@@ -55,6 +56,8 @@ class KXLootboxCreate extends BaseSubCommand {
 		$plugin = KXLootbox::getInstance();
 		$config = $plugin->getConfig();
 		$message = KXSourceUtils::getMessages();
+
+		if (!$sender instanceof Player) return;
 	
 		if (!isset($args["lootbox_name"], $args["identifier"])) {
 			$sender->sendMessage($config->get("prefix") . " " . str_replace("{base-cmd}", $config->get("base-cmd"), $config->get("sub-cmd-create-usage")));
