@@ -66,8 +66,8 @@ final class KXItemUtils {
      */
     public static function encodeContent(array $contents): string {
         $kxBoxItems = [];
-		foreach ($contents as $content) $kxBoxItems[] = self::encodeItem($content);
-		return json_encode($kxBoxItems);
+	foreach ($contents as $content) $kxBoxItems[] = self::encodeItem($content);
+	return json_encode($kxBoxItems);
     }
 
     /**
@@ -75,8 +75,9 @@ final class KXItemUtils {
      * @return array|null
      */
     public static function decodeContent(string $kxBoxData): ?array {
-		$kxBoxItems = json_decode($kxBoxData);
-        if (!is_null($kxBoxItems)) return $kxBoxItems ?? null;
+	$kxBoxItems = json_decode($kxBoxData);
+        if (!is_null($kxBoxItems)) return $kxBoxItems;
+	return null;
     }
 
     /**
