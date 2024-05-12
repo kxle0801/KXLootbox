@@ -118,3 +118,5 @@ Need help or Report Bugs and Errors? [Contact Us](https://discord.gg/vhnRSH7k) (
 ## Get In Touch
 [![YOUTUBE](https://img.shields.io/badge/KxlePH-white?logo=youtube&logoColor=red&label=Youtube&labelColor=white&color=red)](https://www.youtube.com/@kxle-ph)
 [![DISCORD](https://img.shields.io/badge/Elysium_Community-black?logo=discord&logoColor=white&label=Discord&labelColor=blue&color=white)](https://discord.gg/vhnRSH7k)
+<br>
+Subscribe for more! ❤️
