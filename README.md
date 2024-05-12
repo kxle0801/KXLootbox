@@ -16,7 +16,7 @@ config-version: 0.1.0
 # You can change this prefix as you want. Leave "" if don't want it.
 prefix: "§r§8[§4KXL§coot§fbox§8]§r"
 
-# Base command for running the plugin.
+# Base command for executing the plugin command.
 base-cmd: "kxleph" # ;>
 
 # Base Command Description of your provided Base Command.
