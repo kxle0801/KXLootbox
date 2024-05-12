@@ -5,7 +5,7 @@ This plugin allows you to make your own Lootbox in-game. Fully Configurable and 
 <br>
 
 ## Features
-- &#9745; Fully Configurable
+- [x] Fully Configurable
 - [x] Manage Lootbox In-Game
 - [x] Manage Lootbox In-Game
 
@@ -84,3 +84,4 @@ lootbox-lore:
 ```
 ## Get In Touch
 [![YOUTUBE](https://img.shields.io/badge/KxlePH-white?logo=youtube&logoColor=red&label=Youtube&labelColor=white&color=red)](https://www.youtube.com/@kxle-ph)
+[![DISCORD](https://img.shields.io/badge/Elysium-white?logo=discord&logoColor=white&label=Discord&labelColor=white&color=violet)](https://discord.gg/vhnRSH7k)
