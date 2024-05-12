@@ -102,8 +102,18 @@ lootbox-lore:
 REMEMBER: You can customize command name, description, aliases and usage information on your `plugin_data/KXLootbox/config.yml` file, Use it wisely!
 
 ## Virions
-- [Commando](https://github.com/CortexPE/Commando) ()
+- [Commando](https://github.com/CortexPE/Commando) (CortexPE)
 - [InvMenu](https://github.com/muqsit/InvMenu) (Muqsit)
+
+## Support
+Need help or Report Bugs and Errors [Contact Us](https://discord.gg/vhnRSH7k) (Our Discord Community)
+
+## 📜TODO
+- [x] Animations per lootbox
+- [x] Titles or Popups
+- [x] Remove specific item on lootbox
+- [x] Add Chances for each items
+- [x] Editable lootbox details
 
 ## Get In Touch
 [![YOUTUBE](https://img.shields.io/badge/KxlePH-white?logo=youtube&logoColor=red&label=Youtube&labelColor=white&color=red)](https://www.youtube.com/@kxle-ph)
