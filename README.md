@@ -6,8 +6,10 @@ This plugin allows you to make your own Lootbox in-game. Fully Configurable and 
 
 ## Features
 - [x] Fully Configurable
-- [x] Manage Lootbox In-Game
-- [x] Manage Lootbox In-Game
+- [x] Manages Lootbox In-Game
+- [x] Togglable Preview Contents
+- [x] Custom Command
+- [x] And many more!
 
 ## Config
 ```yaml
@@ -70,6 +72,9 @@ lootbox-glint: true
 # "custom.type" set custom lore as you want on lootbox-lore below.
 # "items.type" sets as lore for every item name on the lootbox rewards.
 lootbox-lore-type: "custom.type"
+
+# Allows to preview contents of lootbox by Tap-Holding or Right-Clicking it.
+lootbox-preview: true
 
 # Custom lore info for your lootbox.
 # tag:
