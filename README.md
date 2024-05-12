@@ -3,14 +3,12 @@ KXLootbox plugin for PocketMine-MP and inspired by Subscriber Suggestion.
 <br>
 This plugin allows you to make your own Lootbox in-game. Fully Configurable and much more!
 <br>
-
 ## Features
 - [x] Fully Configurable
 - [x] Manages Lootbox In-Game
 - [x] Togglable Preview Contents
 - [x] Custom Command
 - [x] And many more!
-
 ## Config
 ```yaml
 # KXLootbox Configuration.
@@ -87,7 +85,6 @@ lootbox-lore:
   - §r§7(§aRight-Click to preview§7)
   - §r§7---
 ```
-
 ## Command
 | **COMMAND** | **DESCRIPTION** | **PERMISSION** | **ALIASES** | **USAGE** |
 | --- | --- | --- | --- | --- |
@@ -97,8 +94,7 @@ lootbox-lore:
 | `/kxleph delete` | `Deletes existing lootbox with specified lootbox identifier` | *`N/A`* | *`N/A`* | `[identifier]` |
 | `/kxleph list` | `Lists all created lootbox with name and identifier.` | *`N/A`* | *`N/A`* | *`N/A`* |
 <br>
-*REMEMBER: You can customize command name, description, aliases and usage information on your `plugin_data/KXLootbox/config.yml` file, Use it wisely!*
-
+*REMEMBER: You can customize command name, description, aliases and usage information on your plugin_data/KXLootbox/config.yml file, Use it wisely!*
 ## Get In Touch
 [![YOUTUBE](https://img.shields.io/badge/KxlePH-white?logo=youtube&logoColor=red&label=Youtube&labelColor=white&color=red)](https://www.youtube.com/@kxle-ph)
 [![DISCORD](https://img.shields.io/badge/Elysium_Community-black?logo=discord&logoColor=white&label=Discord&labelColor=blue&color=white)](https://discord.gg/vhnRSH7k)
