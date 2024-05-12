@@ -98,7 +98,9 @@ lootbox-lore:
 | `/kxleph list` | `Lists all created lootbox with name and identifier.` | *`N/A`* | *`N/A`* | *`N/A`* |
 
 <br>
+```md
 *REMEMBER: You can customize command name, description, aliases and usage information on your `plugin_data/KXLootbox/config.yml` file, Use it wisely!*
+```
 <br>
 
 ## Get In Touch
