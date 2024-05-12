@@ -1,5 +1,5 @@
 ## Overview
-![image](https://github.com/kxle0801/KXLootbox/blob/main/kxlootbox_icon.png)
+<h1>KXLootbox<img src="https://github.com/kxle0801/KXLootbox/blob/main/kxlootbox_icon.png" height="64" width="64" align="left"></img>&nbsp;</h1>
 <br>
 KXLootbox plugin for PocketMine-MP and inspired by Subscriber Suggestion.
 <br>
@@ -100,6 +100,10 @@ lootbox-lore:
 | `/kxleph list` | `Lists all created lootbox with name and identifier.` | *`N/A`* | *`N/A`* | *`N/A`* |
 
 REMEMBER: You can customize command name, description, aliases and usage information on your `plugin_data/KXLootbox/config.yml` file, Use it wisely!
+
+## Virions
+- [Commando](https://github.com/CortexPE/Commando) ()
+- [InvMenu](https://github.com/muqsit/InvMenu) (Muqsit)
 
 ## Get In Touch
 [![YOUTUBE](https://img.shields.io/badge/KxlePH-white?logo=youtube&logoColor=red&label=Youtube&labelColor=white&color=red)](https://www.youtube.com/@kxle-ph)
