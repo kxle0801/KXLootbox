@@ -3,6 +3,12 @@ KXLootbox plugin for PocketMine-MP and inspired by Subscriber Suggestion.
 <br>
 This plugin allows you to make your own Lootbox in-game. Fully Configurable and much more!
 <br>
+
+## Features
+- &#9745; Fully Configurable
+- [x] Manage Lootbox In-Game
+- [x] Manage Lootbox In-Game
+
 ## Config
 ```yaml
 # KXLootbox Configuration.
