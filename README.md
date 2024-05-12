@@ -91,7 +91,7 @@ lootbox-lore:
 ```
 
 ## Command
-| **COMMAND** | **DESCRIPTION** | **PERMISSION** | **ALIASES** | **USAGE** |
+| **Comand** | **Description** | **Permission** | **Aliases** | **Usage** |
 | --- | --- | --- | --- | --- |
 | `/kxleph` | `This executes KXLootbox plugin command.` | *`perm.kxbox.command`* | `[lootbox, kxlb, lb]` | `[create, give, delete, list]` |
 | `/kxleph create` | `Creates a lootbox that stores your inventory items in it.` | *`N/A`* | *`N/A`* | `[lootbox_name:identifier]` |
