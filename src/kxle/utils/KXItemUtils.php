@@ -72,11 +72,11 @@ final class KXItemUtils {
 
     /**
      * @param string $kxBoxData
-     * @return array
+     * @return array|null
      */
-    public static function decodeContent(string $kxBoxData): array {
+    public static function decodeContent(string $kxBoxData): ?array {
 		$kxBoxItems = json_decode($kxBoxData);
-        if (!is_null($kxBoxItems)) return $kxBoxItems;
+        if (!is_null($kxBoxItems)) return $kxBoxItems ?? null;
     }
 
     /**
