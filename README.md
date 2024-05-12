@@ -97,11 +97,7 @@ lootbox-lore:
 | `/kxleph delete` | `Deletes existing lootbox with specified lootbox identifier` | *`N/A`* | *`N/A`* | `[identifier]` |
 | `/kxleph list` | `Lists all created lootbox with name and identifier.` | *`N/A`* | *`N/A`* | *`N/A`* |
 
-<br>
-```md
-*REMEMBER: You can customize command name, description, aliases and usage information on your `plugin_data/KXLootbox/config.yml` file, Use it wisely!*
-```
-<br>
+REMEMBER: You can customize command name, description, aliases and usage information on your `plugin_data/KXLootbox/config.yml` file, Use it wisely!
 
 ## Get In Touch
 [![YOUTUBE](https://img.shields.io/badge/KxlePH-white?logo=youtube&logoColor=red&label=Youtube&labelColor=white&color=red)](https://www.youtube.com/@kxle-ph)
