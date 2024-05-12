@@ -93,11 +93,11 @@ lootbox-lore:
 ## Commands
 | **Command** | **Description** | **Permission** | **Aliases** | **Usage** |
 | --- | --- | --- | --- | --- |
-| `/kxleph` | `This executes KXLootbox plugin command.` | *`perm.kxbox.command`* | `[lootbox, kxlb, lb]` | `[create, give, delete, list]` |
-| `/kxleph create` | `Creates a lootbox that stores your inventory items in it.` | *`N/A`* | *`N/A`* | `[lootbox_name:identifier]` |
-| `/kxleph give` | `Gives player a lootbox with specified lootbox identifier` | *`N/A`* | *`N/A`* | `[player_name:identifier:amount]` |
-| `/kxleph delete` | `Deletes existing lootbox with specified lootbox identifier` | *`N/A`* | *`N/A`* | `[identifier]` |
-| `/kxleph list` | `Lists all created lootbox with name and identifier.` | *`N/A`* | *`N/A`* | *`N/A`* |
+| `/kxleph` | This executes KXLootbox plugin command. | *`perm.kxbox.command`* | `[lootbox, kxlb, lb]` | `[create, give, delete, list]` |
+| `/kxleph create` | Creates a lootbox that stores your inventory items in it. | *`N/A`* | *`N/A`* | `[lootbox_name:identifier]` |
+| `/kxleph give` | Gives player a lootbox with specified lootbox identifier | *`N/A`* | *`N/A`* | `[player_name:identifier:amount]` |
+| `/kxleph delete` | Deletes existing lootbox with specified lootbox identifier` | *`N/A`* | *`N/A`* | `[identifier]` |
+| `/kxleph list` | Lists all created lootbox with name and identifier. | *`N/A`* | *`N/A`* | *`N/A`* |
 
 REMEMBER: You can customize command name, description, aliases and usage information on your `plugin_data/KXLootbox/config.yml` file, Use it wisely!
 
