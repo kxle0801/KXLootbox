@@ -16,6 +16,9 @@ This plugin allows you to make your own Lootbox in-game. Configurable and much m
 ## Config
 ```yaml
 # KXLootbox Configuration.
+# KXLootbox Github: https://github.com/kxle0801/KXLootbox
+# Author: KxlePH
+# - Github: https://github.com/kxle0801
 
 # Do not change the version. RECOMMENDED!
 config-version: 0.1.0
@@ -84,9 +87,14 @@ lootbox-preview: true
 # {rewards} shows all possible rewards of lootbox
 # {identifier} shows what's lootbox identifier
 lootbox-lore:
-  - §r§7Place {name} §7anywhere to claim your rewards!
-  - ""
-  - §r§7(§aRight-Click to preview§7)
+  - "§r{identifier}"
+  - §r§7Place this anywhere to claim {name} Lootbox§7.
+  - "§r"
+  - "§r§l§c** POSSIBLE REWARDS **"
+  - "§r{rewards}"
+  - "§r"
+  - §r§8(§7Left-Click to §cclaim§8)
+  - §r§8(§7Right-Click to §cpreview§8)
   - §r§7---
 ```
 
