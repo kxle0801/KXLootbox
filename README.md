@@ -106,7 +106,7 @@ REMEMBER: You can customize command name, description, aliases and usage informa
 - [InvMenu](https://github.com/muqsit/InvMenu) (Muqsit)
 
 ## Support
-Need help or Report Bugs and Errors [Contact Us](https://discord.gg/vhnRSH7k) (Our Discord Community)
+Need help or Report Bugs and Errors? [Contact Us](https://discord.gg/vhnRSH7k) (Our Discord Community)
 
 ## 📜TODO
 - [x] Animations per lootbox
