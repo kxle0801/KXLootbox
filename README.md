@@ -5,8 +5,6 @@ KXLootbox plugin for PocketMine-MP and inspired by Subscriber Suggestion.
 <br>
 This plugin allows you to make your own Lootbox in-game. Fully Configurable and much more!
 <br>
-- Credit to original concept ❤️
-<br>
 
 ## Features
 - [x] Fully Configurable
@@ -122,3 +120,4 @@ REMEMBER: You can customize command name, description, aliases and usage informa
 [![DISCORD](https://img.shields.io/badge/Elysium_Community-black?logo=discord&logoColor=white&label=Discord&labelColor=blue&color=white)](https://discord.gg/vhnRSH7k)
 <br>
 Subscribe for more! ❤️
+Credit to original concept ❤️
