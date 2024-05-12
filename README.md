@@ -87,6 +87,20 @@ lootbox-lore:
   - §r§7(§aRight-Click to preview§7)
   - §r§7---
 ```
+
+## Command
+| **COMMAND** | **DESCRIPTION** | **PERMISSION** | **ALIASES** | **USAGE** | 
+| --- | --- | --- | --- |
+| `/kxleph` | `This executes KXLootbox plugin command.` | *`perm.kxbox.command`* | `[lootbox, kxlb, lb]` | `[action:create, give, delete, list]` |
+| --- | --- | --- | --- |
+| `/kxleph create` | `Creates a lootbox that stores your inventory items in it.` | *`N/A`* | `N/A` | `[string:lootbox_name|identifier]` |
+| --- | --- | --- | --- |
+| `/kxleph give` | `Gives player a lootbox with specified lootbox identifier` | *`N/A`* | `N/A` | `[string:player_name|identifier|amount]` |
+| --- | --- | --- | --- |
+| `/kxleph delete` | `Deletes existing lootbox with specified lootbox identifier` | *`N/A`* | `N/A` | `[string:|identifier]` |
+| --- | --- | --- | --- |
+| `/kxleph list` | `Lists all created lootbox with name and identifier.` | *`N/A`* | `N/A` | `N/A` |
+
 ## Get In Touch
 [![YOUTUBE](https://img.shields.io/badge/KxlePH-white?logo=youtube&logoColor=red&label=Youtube&labelColor=white&color=red)](https://www.youtube.com/@kxle-ph)
 [![DISCORD](https://img.shields.io/badge/Elysium_Community-black?logo=discord&logoColor=white&label=Discord&labelColor=blue&color=white)](https://discord.gg/vhnRSH7k)
