@@ -1,9 +1,9 @@
 <div align="center">
-  <img src="https://github.com/kxle0801/KXLootbox/blob/main/kxlootbox_icon.png" height="128" width="128" align="left">&nbsp;</img>
-  <h1> KXLootbox </h1>
+  <img src="https://github.com/kxle0801/KXLootbox/blob/main/kxlootbox_icon.png" height="128" width="128" align="center"></img>
+  <br><br>
+  <h1> 📦 KXLootbox 📦 </h1>
   <p>
-    KXLootbox plugin for PocketMine-MP and inspired by Subscriber Suggestion.
-    This plugin allows you to make your own Lootbox in-game! Configurable and much more.
+    KXLootbox plugin for PocketMine-MP, Inspired on our Community Plugin Suggestions.
   </p>
 </div>
 
