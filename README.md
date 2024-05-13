@@ -119,6 +119,9 @@ REMEMBER: You can customize command name, description, aliases and usage informa
 ## Demo
 - Check Here: [Demo](https://youtu.be/9ydqS1pMYpk) (KxlePH)
 
+## Download
+- Download [Here](https://poggit.pmmp.io/r/238766/KXLootbox_dev-12.phar).
+
 ## 📜TODO
 - [x] Animations per lootbox
 - [x] Titles or Popups
