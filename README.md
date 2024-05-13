@@ -117,7 +117,7 @@ REMEMBER: You can customize command name, description, aliases and usage informa
 - Need help or Report Bugs and Errors? [Contact Us](https://discord.gg/vhnRSH7k) (Our Discord Community)
 
 ## Demo
-
+- Check Here: [Demo](https://youtu.be/9ydqS1pMYpk) (KxlePH)
 
 ## 📜TODO
 - [x] Animations per lootbox
