@@ -116,12 +116,16 @@ REMEMBER: You can customize command name, description, aliases and usage informa
 ## Support
 - Need help or Report Bugs and Errors? [Contact Us](https://discord.gg/vhnRSH7k) (Our Discord Community)
 
+## Demo
+
+
 ## 📜TODO
 - [x] Animations per lootbox
 - [x] Titles or Popups
 - [x] Remove specific item on lootbox
 - [x] Add Chances for each items
 - [x] Editable lootbox details
+- [x] Add Sounds
 
 ## Get In Touch
 [![YOUTUBE](https://img.shields.io/badge/KxlePH-white?logo=youtube&logoColor=red&label=Youtube&labelColor=white&color=red)](https://www.youtube.com/@kxle-ph)
