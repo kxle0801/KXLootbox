@@ -1,19 +1,15 @@
-# Overview
-<h1>KXLootbox<img src="https://github.com/kxle0801/KXLootbox/blob/main/kxlootbox_icon.png" height="128" width="128" align="left"></img>&nbsp;</h1>
-<br>
+<h1>KXLootbox<img src="https://github.com/kxle0801/KXLootbox/blob/main/kxlootbox_icon.png" height="128" width="128" align="left">&nbsp;</img></h1><br />
 KXLootbox plugin for PocketMine-MP and inspired by Subscriber Suggestion.
-<br>
-This plugin allows you to make your own Lootbox in-game. Configurable and much more!
-<br>
+This plugin allows you to make your own Lootbox in-game! Configurable and much more. <br><br>
 
-## Features
+# Features
 - [x] Fully Configurable
 - [x] Manages Lootbox In-Game
 - [x] Togglable Preview Contents
 - [x] Custom Command
 - [x] And many more!
 
-## Config
+# Config
 ```yaml
 # KXLootbox Configuration.
 # KXLootbox Github: https://github.com/kxle0801/KXLootbox
@@ -109,20 +105,22 @@ lootbox-lore:
 
 REMEMBER: You can customize command name, description, aliases and usage information on your `plugin_data/KXLootbox/config.yml` file, Use it wisely!
 
-## Virions
+### Virions
 - [Commando](https://github.com/CortexPE/Commando) (CortexPE)
 - [InvMenu](https://github.com/muqsit/InvMenu) (Muqsit)
 
-## Support
+### Support
 - Need help or Report Bugs and Errors? [Contact Us](https://discord.gg/vhnRSH7k) (Our Discord Community)
 
-## Demo
+### Demo
+<h1>Video Demo<img src="https://github.com/kxle0801/KXLootbox/blob/main/KXLootbox%20Thumbnail.png" height="72" width="128" align="left"></img></h1><br><br>
+
 - Check Here: [Demo](https://youtu.be/9ydqS1pMYpk) (KxlePH)
 
-## Download
+### Download
 - Download [Here](https://poggit.pmmp.io/r/238766/KXLootbox_dev-12.phar).
 
-## 📜TODO
+### 📜TODO
 - [x] Animations per lootbox
 - [x] Titles or Popups
 - [x] Remove specific item on lootbox
@@ -130,8 +128,8 @@ REMEMBER: You can customize command name, description, aliases and usage informa
 - [x] Editable lootbox details
 - [x] Add Sounds
 
-## Get In Touch
+### Get In Touch
 [![YOUTUBE](https://img.shields.io/badge/KxlePH-white?logo=youtube&logoColor=red&label=Youtube&labelColor=white&color=red)](https://www.youtube.com/@kxle-ph)
 [![DISCORD](https://img.shields.io/badge/Elysium_Community-black?logo=discord&logoColor=white&label=Discord&labelColor=blue&color=white)](https://discord.gg/vhnRSH7k)
 <br>
-Credits to original concept ❤️
+- Credits to original concept ❤️
