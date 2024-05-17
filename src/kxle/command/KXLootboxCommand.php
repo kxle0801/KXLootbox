@@ -62,7 +62,7 @@ class KXLootboxCommand extends BaseCommand {
 	 * @return void
 	 */
 	public function prepare(): void {
-		$this->setPermission(get_class(this));
+		$this->setPermission(get_class($this));
 		$this->registerSubCommand(new KXLootboxCreate("create"));
 		$this->registerSubCommand(new KXLootboxDelete("delete"));
 		$this->registerSubCommand(new KXLootboxGive("give"));
