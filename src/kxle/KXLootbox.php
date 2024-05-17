@@ -18,7 +18,7 @@
  * with this distribution or visit the GNU website at <https://www.gnu.org/>.
  * 
  * Github: https://github.com/kxle0801
- * Author: KxlePH
+ * Author: KxlePH.
  */
 
 declare(strict_types = 1);
