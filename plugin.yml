@@ -8,3 +8,11 @@ description: "This plugin allows you to make your own Lootbox in-game. Fully Con
 permissions:
   perm.kxbox.command:
     default: op
+  perm.kxbox.command.create:
+    default: op
+  perm.kxbox.command.delete:
+    default: op
+  perm.kxbox.command.give:
+    default: op
+  perm.kxbox.command.list:
+    default: op

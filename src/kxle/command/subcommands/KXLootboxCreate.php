@@ -43,6 +43,7 @@ class KXLootboxCreate extends BaseSubCommand {
 	 * @return void
 	 */
 	public function prepare(): void {
+		$this->setPermission(PermissionIds::KXLOOTBOX_COMMAND_CREATE);
 		$this->registerArgument(0, new RawStringArgument("lootbox_name", true));
 		$this->registerArgument(1, new RawStringArgument("identifier", true));
 	}

@@ -40,6 +40,7 @@ class KXLootboxDelete extends BaseSubCommand {
 	 * @return void
 	 */
 	public function prepare(): void {
+		$this->setPermission(PermissionIds::KXLOOTBOX_COMMAND_DELETE);
 		$this->registerArgument(0, new RawStringArgument("identifier", true));
 	}
 

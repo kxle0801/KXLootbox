@@ -91,11 +91,10 @@ class KXLootboxCommand extends BaseCommand {
 			return;
 		}
 
-		if (!$plugin->getServer()->isOp($sender->getName())) {
-			$sender->sendMessage($config->get("prefix") . " " . $message->get("base-cmd-NoPerm"));
+		if ($plugin->getServer()->isOp($sender->getName())) {
+			$sender->sendMessage($config->get("prefix") . " " . str_replace("{base-cmd}", $config->get("base-cmd"), $config->get("base-cmd-usage")));
 			return;
 		}
-		
-		$sender->sendMessage($config->get("prefix") . " " . str_replace("{base-cmd}", $config->get("base-cmd"), $config->get("base-cmd-usage")));
+		$sender->sendMessage($config->get("prefix") . " " . $message->get("base-cmd-NoPerm"));
 	}	
 }

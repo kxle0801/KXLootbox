@@ -38,7 +38,9 @@ class KXLootboxList extends BaseSubCommand {
 	/**
 	 * @return void
 	 */
-	public function prepare(): void {}
+	public function prepare(): void {
+		$this->setPermission(PermissionIds::KXLOOTBOX_COMMAND_LIST);
+	}
 
 	/**
 	 * @param CommandSender $sender

@@ -43,6 +43,7 @@ class KXLootboxGive extends BaseSubCommand {
 	 * @return void
 	 */
 	public function prepare(): void {
+		$this->setPermission(PermissionIds::KXLOOTBOX_COMMAND_GIVE);
 		$this->registerArgument(0, new RawStringArgument("player", true));
 		$this->registerArgument(1, new RawStringArgument("identifier", true));
 		$this->registerArgument(2, new IntegerArgument("amount", true));
