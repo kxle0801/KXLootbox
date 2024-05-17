@@ -40,7 +40,7 @@ use pocketmine\player\Player;
 use pocketmine\plugin\Plugin;
 use pocketmine\command\CommandSender;
 
-use CortexPE\Commando\BaseCommand;
+use libs\CortexPE\Commando\BaseCommand;
 
 class KXLootboxCommand extends BaseCommand {
 

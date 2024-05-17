@@ -33,9 +33,9 @@ use kxle\utils\KXSourceUtils;
 use pocketmine\Server;
 use pocketmine\command\CommandSender;
 
-use CortexPE\Commando\BaseSubCommand;
-use CortexPE\Commando\args\IntegerArgument;
-use CortexPE\Commando\args\RawStringArgument;
+use libs\CortexPE\Commando\BaseSubCommand;
+use libs\CortexPE\Commando\args\IntegerArgument;
+use libs\CortexPE\Commando\args\RawStringArgument;
 
 class KXLootboxGive extends BaseSubCommand {
 
