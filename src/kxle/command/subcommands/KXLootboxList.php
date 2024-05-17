@@ -52,7 +52,7 @@ class KXLootboxList extends BaseSubCommand {
 		$config = $plugin->getConfig();
 		$message = KXSourceUtils::getMessages();
 
-		if (!$sender->hasPermission(PermissionIds::KXLOOTBOX_COMMAND) || $plugin->getServer()->isOp($sender->getName())) {
+		if (!$sender->hasPermission(PermissionIds::KXLOOTBOX_COMMAND) || !$plugin->getServer()->isOp($sender->getName())) {
 	            $sender->sendMessage($config->get("prefix") . " " . $message->get("base-cmd-NoPerm"));
 	            return;
 	        }
