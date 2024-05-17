@@ -122,12 +122,12 @@ REMEMBER: You can customize command name, description, aliases and usage informa
 - Download [Here](https://poggit.pmmp.io/r/238766/KXLootbox_dev-12.phar).
 
 # 📜TODO
-- [x] Animations per lootbox
-- [x] Titles or Popups
-- [x] Remove specific item on lootbox
-- [x] Add Chances for each items
-- [x] Editable lootbox details
-- [x] Add Sounds
+- [ ] Animations per lootbox
+- [ ] Titles or Popups
+- [ ] Remove specific item on lootbox
+- [ ] Add Chances for each items
+- [ ] Editable lootbox details
+- [ ] Add Sounds
 
 ## Virions
 - [Commando](https://github.com/CortexPE/Commando) (CortexPE)
