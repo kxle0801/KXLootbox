@@ -28,7 +28,6 @@ namespace kxle\command\subcommands;
 use kxle\KXLootbox;
 
 use kxle\utils\KXSourceUtils;
-use kxle\utils\PermissionIds;
 
 use pocketmine\command\CommandSender;
 
@@ -51,11 +50,6 @@ class KXLootboxList extends BaseSubCommand {
 		$plugin = KXLootbox::getInstance();
 		$config = $plugin->getConfig();
 		$message = KXSourceUtils::getMessages();
-
-		if (!$sender->hasPermission(PermissionIds::KXLOOTBOX_COMMAND) || !$plugin->getServer()->isOp($sender->getName())) {
-	            $sender->sendMessage($config->get("prefix") . " " . $message->get("base-cmd-NoPerm"));
-	            return;
-	        }
 		
 		$kxBoxData = KXSourceUtils::getKXBoxData()->getAll();
 		$boxesInfo = [];
