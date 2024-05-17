@@ -28,6 +28,7 @@ namespace kxle\command;
 use kxle\KXLootbox;
 
 use kxle\utils\KXSourceUtils;
+use kxle\utils\PermissionIds;
 
 use kxle\command\subcommands\KXLootboxGive;
 use kxle\command\subcommands\KXLootboxList;
@@ -62,7 +63,7 @@ class KXLootboxCommand extends BaseCommand {
 	 * @return void
 	 */
 	public function prepare(): void {
-		$this->setPermission(get_class($this));
+		$this->setPermission(PermissionIds::KXLOOTBOX_COMMAND);
 		$this->registerSubCommand(new KXLootboxCreate("create"));
 		$this->registerSubCommand(new KXLootboxDelete("delete"));
 		$this->registerSubCommand(new KXLootboxGive("give"));
