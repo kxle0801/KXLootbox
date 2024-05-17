@@ -29,8 +29,6 @@ use kxle\KXLootbox;
 
 use kxle\utils\KXSourceUtils;
 
-use kxle\utils\PermissionIds;
-
 use kxle\command\subcommands\KXLootboxGive;
 use kxle\command\subcommands\KXLootboxList;
 use kxle\command\subcommands\KXLootboxCreate;
@@ -64,7 +62,6 @@ class KXLootboxCommand extends BaseCommand {
 	 * @return void
 	 */
 	public function prepare(): void {
-		$this->setPermission(PermissionIds::KXLOOTBOX_COMMAND);
 		$this->registerSubCommand(new KXLootboxCreate("create"));
 		$this->registerSubCommand(new KXLootboxDelete("delete"));
 		$this->registerSubCommand(new KXLootboxGive("give"));
@@ -92,7 +89,7 @@ class KXLootboxCommand extends BaseCommand {
 			return;
 		}
 		
-		if (!$sender->hasPermission(PermissionIds::KXLOOTBOX_COMMAND) || !$plugin->getServer()->isOp($sender->getName())) {
+		if (!$plugin->getServer()->isOp($sender->getName())) {
 			$sender->sendMessage($config->get("prefix") . " " . $message->get("base-cmd-NoPerm"));
 			return;
 		}
