@@ -47,7 +47,7 @@ final class KXItemUtils {
      * @param string $itemType
      * @param string $kxBoxName
      * @param integer $count
-     * @param array[] $lores
+     * @param array[] $lore
      * @param boolean $isGlint
      * @return Item|null
      */
@@ -66,18 +66,17 @@ final class KXItemUtils {
      */
     public static function encodeContent(array $contents): string {
         $kxBoxItems = [];
-	foreach ($contents as $content) $kxBoxItems[] = self::encodeItem($content);
-	return json_encode($kxBoxItems);
+		foreach ($contents as $content) $kxBoxItems[] = self::encodeItem($content);
+		return json_encode($kxBoxItems);
     }
 
     /**
      * @param string $kxBoxData
-     * @return array|null
+     * @return array
      */
-    public static function decodeContent(string $kxBoxData): ?array {
-	$kxBoxItems = json_decode($kxBoxData);
+    public static function decodeContent(string $kxBoxData): array {
+		$kxBoxItems = json_decode($kxBoxData);
         if (!is_null($kxBoxItems)) return $kxBoxItems;
-	return null;
     }
 
     /**

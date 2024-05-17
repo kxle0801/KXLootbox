@@ -35,8 +35,8 @@ use pocketmine\data\bedrock\EnchantmentIdMap;
 
 use pocketmine\plugin\PluginBase;
 
-use CortexPE\Commando\PacketHooker;
-use muqsit\invmenu\InvMenuHandler;
+use libs\CortexPE\Commando\PacketHooker;
+use libs\muqsit\invmenu\InvMenuHandler;
 
 class KXLootbox extends PluginBase {
 

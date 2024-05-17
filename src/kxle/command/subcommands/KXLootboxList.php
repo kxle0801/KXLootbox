@@ -31,7 +31,7 @@ use kxle\utils\KXSourceUtils;
 
 use pocketmine\command\CommandSender;
 
-use CortexPE\Commando\BaseSubCommand;
+use libs\CortexPE\Commando\BaseSubCommand;
 
 class KXLootboxList extends BaseSubCommand {
 
@@ -50,6 +50,11 @@ class KXLootboxList extends BaseSubCommand {
 		$plugin = KXLootbox::getInstance();
 		$config = $plugin->getConfig();
 		$message = KXSourceUtils::getMessages();
+
+		if (!$plugin->getServer()->isOp($sender->getName())) {
+			$sender->sendMessage($config->get("prefix") . " " . $message->get("base-cmd-NoPerm"));
+			return;
+		}
 		
 		$kxBoxData = KXSourceUtils::getKXBoxData()->getAll();
 		$boxesInfo = [];

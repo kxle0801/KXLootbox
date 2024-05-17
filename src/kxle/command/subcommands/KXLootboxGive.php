@@ -33,9 +33,9 @@ use kxle\utils\KXSourceUtils;
 use pocketmine\Server;
 use pocketmine\command\CommandSender;
 
-use CortexPE\Commando\BaseSubCommand;
-use CortexPE\Commando\args\IntegerArgument;
-use CortexPE\Commando\args\RawStringArgument;
+use libs\CortexPE\Commando\BaseSubCommand;
+use libs\CortexPE\Commando\args\IntegerArgument;
+use libs\CortexPE\Commando\args\RawStringArgument;
 
 class KXLootboxGive extends BaseSubCommand {
 
@@ -58,6 +58,11 @@ class KXLootboxGive extends BaseSubCommand {
 		$plugin = KXLootbox::getInstance();
 		$config = $plugin->getConfig();
 		$message = KXSourceUtils::getMessages();
+
+		if (!$plugin->getServer()->isOp($sender->getName())) {
+			$sender->sendMessage($config->get("prefix") . " " . $message->get("base-cmd-NoPerm"));
+			return;
+		}
 	
 		if (!isset($args["player"], $args["identifier"], $args["amount"])) {
 			$sender->sendMessage($config->get("prefix") . " " . str_replace("{base-cmd}", $config->get("base-cmd"), $config->get("sub-cmd-give-usage")));
