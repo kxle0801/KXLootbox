@@ -28,6 +28,7 @@ namespace kxle\command\subcommands;
 use kxle\KXLootbox;
 
 use kxle\utils\KXSourceUtils;
+use kxle\utils\PermissionIds;
 
 use pocketmine\player\Player;
 
@@ -61,6 +62,11 @@ class KXLootboxCreate extends BaseSubCommand {
 
 		if (!$sender instanceof Player) {
 			$sender->sendMessage($config->get("prefix") . " " . $message->get("base-cmd-NoConsole"));
+			return;
+		}
+
+		if (!$plugin->getServer()->isOp($sender->getName())) {
+			$sender->sendMessage($config->get("prefix") . " " . $message->get("base-cmd-NoPerm"));
 			return;
 		}
 	

@@ -28,6 +28,7 @@ namespace kxle\command\subcommands;
 use kxle\KXLootbox;
 
 use kxle\utils\KXSourceUtils;
+use kxle\utils\PermissionIds;
 
 use pocketmine\command\CommandSender;
 
@@ -54,6 +55,11 @@ class KXLootboxDelete extends BaseSubCommand {
 		$plugin = KXLootbox::getInstance();
 		$config = $plugin->getConfig();
 		$message = KXSourceUtils::getMessages();
+
+		if (!$plugin->getServer()->isOp($sender->getName())) {
+			$sender->sendMessage($config->get("prefix") . " " . $message->get("base-cmd-NoPerm"));
+			return;
+		}
 	
 		if (!isset($args["identifier"])) {
 			$sender->sendMessage($config->get("prefix") . " " . str_replace("{base-cmd}", $config->get("base-cmd"), $config->get("sub-cmd-delete-usage")));
