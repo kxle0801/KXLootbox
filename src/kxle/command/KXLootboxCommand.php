@@ -85,16 +85,13 @@ class KXLootboxCommand extends BaseCommand {
 		$plugin = KXLootbox::getInstance();
 		$config = $plugin->getConfig();
 		$message = KXSourceUtils::getMessages();
-	
+
+		$this->setPermissionMessage($config->get("prefix") . " " . $message->get("base-cmd-NoPerm"));
 		if (!$sender instanceof Player) {
 			$sender->sendMessage($config->get("prefix") . " " . $message->get("base-cmd-NoConsole"));
 			return;
 		}
 		
-		if (!$sender->hasPermission(PermissionIds::KXLOOTBOX_COMMAND) || !$plugin->getServer()->isOp($sender->getName())) {
-	            $sender->sendMessage($config->get("prefix") . " " . $message->get("base-cmd-NoPerm"));
-	            return;
-	        }
 		$sender->sendMessage($config->get("prefix") . " " . str_replace("{base-cmd}", $config->get("base-cmd"), $config->get("base-cmd-usage")));
 	}	
 }
