@@ -29,6 +29,7 @@ use kxle\KXLootbox;
 use kxle\command\KXLootboxCommand;
 
 use pocketmine\utils\Config;
+use pocketmine\utils\TextFormat as TF;
 
 final class KXSourceUtils {
 

@@ -32,8 +32,8 @@ use kxle\utils\KXSourceUtils;
 use pocketmine\item\Item;
 use pocketmine\command\CommandSender;
 
-use libs\CortexPE\Commando\BaseSubCommand;
-use libs\CortexPE\Commando\args\RawStringArgument;
+use CortexPE\Commando\BaseSubCommand;
+use CortexPE\Commando\args\RawStringArgument;
 
 class KXLootboxCreate extends BaseSubCommand {
 

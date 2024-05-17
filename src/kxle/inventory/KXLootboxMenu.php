@@ -29,8 +29,8 @@ use kxle\utils\KXItemUtils;
 
 use pocketmine\player\Player;
 
-use libs\muqsit\invmenu\InvMenu;
-use libs\muqsit\invmenu\type\InvMenuTypeIds;
+use muqsit\invmenu\InvMenu;
+use muqsit\invmenu\type\InvMenuTypeIds;
 
 class KXLootboxMenu {
 

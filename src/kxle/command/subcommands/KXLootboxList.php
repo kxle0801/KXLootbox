@@ -31,7 +31,7 @@ use kxle\utils\KXSourceUtils;
 
 use pocketmine\command\CommandSender;
 
-use libs\CortexPE\Commando\BaseSubCommand;
+use CortexPE\Commando\BaseSubCommand;
 
 class KXLootboxList extends BaseSubCommand {
 

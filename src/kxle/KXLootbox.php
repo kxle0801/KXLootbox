@@ -18,7 +18,7 @@
  * with this distribution or visit the GNU website at <https://www.gnu.org/>.
  * 
  * Github: https://github.com/kxle0801
- * Author: KxlePH.
+ * Author: KxlePH
  */
 
 declare(strict_types = 1);
@@ -35,8 +35,8 @@ use pocketmine\data\bedrock\EnchantmentIdMap;
 
 use pocketmine\plugin\PluginBase;
 
-use libs\CortexPE\Commando\PacketHooker;
-use libs\muqsit\invmenu\InvMenuHandler;
+use CortexPE\Commando\PacketHooker;
+use muqsit\invmenu\InvMenuHandler;
 
 class KXLootbox extends PluginBase {
 
