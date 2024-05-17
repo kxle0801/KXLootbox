@@ -91,9 +91,9 @@ class KXLootboxCommand extends BaseCommand {
 			return;
 		}
 		
-		if (!$sender->hasPermission(PermissionIds::KXLOOTBOX_COMMAND)) {
-	    		$sender->sendMessage($config->get("prefix") . " " . $message->get("base-cmd-NoPerm"));
-	            	return;
+		if (!$sender->hasPermission(PermissionIds::KXLOOTBOX_COMMAND) || $plugin->getServer()->isOp($sender->getName())) {
+	            $sender->sendMessage($config->get("prefix") . " " . $message->get("base-cmd-NoPerm"));
+	            return;
 	        }
 		$sender->sendMessage($config->get("prefix") . " " . str_replace("{base-cmd}", $config->get("base-cmd"), $config->get("base-cmd-usage")));
 	}	
