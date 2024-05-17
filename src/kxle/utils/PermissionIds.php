@@ -28,6 +28,5 @@ namespace kxle\utils;
 final class PermissionIds {
 
     const KXLOOTBOX_COMMAND = "perm.kxbox.command";
-    const KXLOOTBOX_COMMAND_GIVE = "perm.kxbox.command.give";
 
 }
