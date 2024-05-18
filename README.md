@@ -115,7 +115,7 @@ lootbox-lore:
 REMEMBER: You can customize command name, description, aliases and usage information on your `plugin_data/KXLootbox/config.yml` file, Use it wisely!
 
 ## Demo
-<a href="https://www.youtube.com/watch?v=9ydqS1pMYpk&t=29s&pp=ygURcG9ja2V0bWluZSBwbHVnaW4%3D"><h1>Video Demo<img src="https://github.com/kxle0801/KXLootbox/blob/main/KXLootbox%20Thumbnail.png" height="72" width="128" align="left"></img></h1></a><br><br>
+<h1>Video Demo<img src="https://github.com/kxle0801/KXLootbox/blob/main/KXLootbox%20Thumbnail.png" height="72" width="128" align="left"></img></h1><br><br>
 
 - Check Here: [Demo](https://youtu.be/9ydqS1pMYpk) (KxlePH)
 
