@@ -104,7 +104,7 @@ final class KXSourceUtils {
      */
     public static function saveKXBoxData(string $kxBoxIdentifier, array $contents): void {
         self::getKXBoxData()->set($kxBoxIdentifier, [
-            "identifier" => $contents['identifier'],
+            "identifier" => TF::clean($contents['identifier']),
             "name" => $contents['name'],
             "contents" => KXItemUtils::encodeContent($contents['contents']),
             "lores" => $contents['lores']
