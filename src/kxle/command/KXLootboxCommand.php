@@ -68,7 +68,7 @@ class KXLootboxCommand extends BaseCommand {
 		$config = KXLootbox::getInstance()->getConfig();
 		$message = KXSourceUtils::getMessages();
 
-		$this->setPermissionMessage($config->get("prefix") . " " . $message->get("base-cmd-NoConsole"));
+		$this->setPermissionMessage($config->get("prefix") . " " . $message->get("base-cmd-NoPerm"));
 		$this->registerSubCommand(new KXLootboxCreate("create"));
 		$this->registerSubCommand(new KXLootboxDelete("delete"));
 		$this->registerSubCommand(new KXLootboxGive("give"));
