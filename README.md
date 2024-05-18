@@ -2,6 +2,7 @@
   <img src="https://github.com/kxle0801/KXLootbox/blob/main/kxlootbox_icon.png" height="128" width="128" align="center"></img>
   <br><br>
   <h1> 📦 KXLootbox 📦 </h1>
+  <img src="https://poggit.pmmp.io/ci.shield/kxle0801/KXLootbox/~"></img>
   <p>
     KXLootbox plugin for PocketMine-MP, Inspired on our Community Plugin Suggestions.
   </p>
