@@ -60,11 +60,6 @@ class KXLootboxGive extends BaseSubCommand {
 		$plugin = KXLootbox::getInstance();
 		$config = $plugin->getConfig();
 		$message = KXSourceUtils::getMessages();
-
-		if (!$plugin->getServer()->isOp($sender->getName())) {
-			$sender->sendMessage($config->get("prefix") . " " . $message->get("base-cmd-NoPerm"));
-			return;
-		}
 	
 		if (!isset($args["player"], $args["identifier"], $args["amount"])) {
 			$sender->sendMessage($config->get("prefix") . " " . str_replace("{base-cmd}", $config->get("base-cmd"), $config->get("sub-cmd-give-usage")));
