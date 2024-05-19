@@ -28,6 +28,7 @@ namespace kxle\event;
 use kxle\KXLootbox;
 
 use kxle\utils\KXItemUtils;
+use kxle\utils\KXSoundUtils;
 use kxle\utils\KXSourceUtils;
 use kxle\inventory\KXLootboxMenu;
 
@@ -90,7 +91,7 @@ class EventListener implements Listener {
                     break;
                 case PlayerInteractEvent::LEFT_CLICK_BLOCK:
                     if (!$config->get("lootbox-preview")) return;
-                    
+
                     KXLootboxMenu::send($player, $kxData);
                     KXSoundUtils::send($sender, $sound->get("sound-Preview"));
                     $event->cancel();

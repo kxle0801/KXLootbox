@@ -27,6 +27,7 @@ namespace kxle\command\subcommands;
 
 use kxle\KXLootbox;
 
+use kxle\utils\KXSoundUtils;
 use kxle\utils\KXSourceUtils;
 use kxle\utils\PermissionIds;
 
