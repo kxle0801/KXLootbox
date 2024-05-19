@@ -55,19 +55,23 @@ class KXLootboxDelete extends BaseSubCommand {
 		$plugin = KXLootbox::getInstance();
 		$config = $plugin->getConfig();
 		$message = KXSourceUtils::getMessages();
+		$sound = KXSourceUtils::getSounds();
 	
 		if (!isset($args["identifier"])) {
 			$sender->sendMessage($config->get("prefix") . " " . str_replace("{base-cmd}", $config->get("base-cmd"), $config->get("sub-cmd-delete-usage")));
+			KXSoundUtils::send($sender, $sound->get("sound-InvalidAction"));
 			return;
 		}
 
 		$kxData = KXSourceUtils::getKXBoxData()->get($args["identifier"]);
 		if (!is_array($kxData) || !isset($kxData['identifier']) || $kxData['identifier'] !== $args["identifier"]) {
 			$sender->sendMessage($config->get("prefix") . " " . str_replace("{identifier}", $args["identifier"], $message->get("sub-cmd-NoId")));
+			KXSoundUtils::send($sender, $sound->get("sound-InvalidAction"));
 			return;
 		}
 
 		KXSourceUtils::getKXBoxData()->remove($args["identifier"]);
 		$sender->sendMessage($config->get("prefix") . " " . str_replace("{identifier}", $args["identifier"], $message->get("sub-cmd-Removed")));
+		KXSoundUtils::send($sender, $sound->get("sound-cmd-Delete"));
 	}
 }

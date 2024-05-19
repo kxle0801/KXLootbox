@@ -27,6 +27,7 @@ namespace kxle\command;
 
 use kxle\KXLootbox;
 
+use kxle\utils\KXSoundUtils;
 use kxle\utils\KXSourceUtils;
 use kxle\utils\PermissionIds;
 
@@ -90,6 +91,7 @@ class KXLootboxCommand extends BaseCommand {
 		$plugin = KXLootbox::getInstance();
 		$config = $plugin->getConfig();
 		$message = KXSourceUtils::getMessages();
+		$sound = KXSourceUtils::getSounds();
 
 		if (!$sender instanceof Player) {
 			$sender->sendMessage($config->get("prefix") . " " . $message->get("base-cmd-NoConsole"));
@@ -98,8 +100,11 @@ class KXLootboxCommand extends BaseCommand {
 
 		if ($plugin->getServer()->isOp($sender->getName())) {
 			$sender->sendMessage($config->get("prefix") . " " . str_replace("{base-cmd}", $config->get("base-cmd"), $config->get("base-cmd-usage")));
+			KXSoundUtils::send($sender, $sound->get("sound-InvalidAction"));
 			return;
 		}
+
 		$sender->sendMessage($config->get("prefix") . " " . $message->get("base-cmd-NoPerm"));
+		KXSoundUtils::send($sender, $sound->get("sound-InvalidAction"));
 	}	
 }

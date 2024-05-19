@@ -53,6 +53,7 @@ class KXLootboxList extends BaseSubCommand {
 		$plugin = KXLootbox::getInstance();
 		$config = $plugin->getConfig();
 		$message = KXSourceUtils::getMessages();
+		$sound = KXSourceUtils::getSounds();
 		
 		$kxBoxData = KXSourceUtils::getKXBoxData()->getAll();
 		$boxesInfo = [];
@@ -63,6 +64,7 @@ class KXLootboxList extends BaseSubCommand {
 
 		if (empty($boxesInfo)) {
 			$sender->sendMessage($config->get("prefix") . " " . str_replace("{base_cmd}", $config->get("base-cmd"), $message->get("sub-cmd-NoBoxes")));
+			KXSoundUtils::send($sender, $sound->get("sound-InvalidAction"));
 			return;
 		}
 
@@ -72,5 +74,6 @@ class KXLootboxList extends BaseSubCommand {
 			$sender->sendMessage(str_replace(["{count}", "{lootbox_name}", "{identifier}"], [$count, $name, $identifier], $config->get("sub-cmd-list-format")));
 			$count++;
 		}
+		KXSoundUtils::send($sender, $sound->get("sound-cmd-List"));
 	}
 }

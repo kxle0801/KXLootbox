@@ -39,6 +39,9 @@ final class KXSourceUtils {
     /** @var Config */
     private static Config $messages;
 
+    /** @var Config */
+    private static Config $sounds;
+
     /**
      * @return void
      */
@@ -51,6 +54,9 @@ final class KXSourceUtils {
 
         $plugin->saveResource("messages.yml");
         self::$messages = new Config(self::getDataFolder() . "messages.yml", Config::YAML);
+
+        $plugin->saveResource("sounds.yml");
+        self::$sounds = new Config(self::getDataFolder() . "sounds.yml", Config::YAML);
 
         $oldVersion = $config->exists("config-version") ? $config->get("config-version") : null;
         if (!$oldVersion || version_compare("0.1.0", $oldVersion) > 0) {
@@ -93,6 +99,15 @@ final class KXSourceUtils {
      */
     public static function getMessages(): Config {
         return self::$messages;
+    }
+
+    /**
+     * Gets Sounds YML.
+     * 
+     * @return Config
+     */
+    public static function getSounds(): Config {
+        return self::$sounds;
     }
 
     /**

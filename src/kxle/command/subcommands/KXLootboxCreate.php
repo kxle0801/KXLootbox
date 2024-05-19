@@ -59,6 +59,7 @@ class KXLootboxCreate extends BaseSubCommand {
 		$plugin = KXLootbox::getInstance();
 		$config = $plugin->getConfig();
 		$message = KXSourceUtils::getMessages();
+		$sound = KXSourceUtils::getSounds();
 
 		if (!$sender instanceof Player) {
 			$sender->sendMessage($config->get("prefix") . " " . $message->get("base-cmd-NoConsole"));
@@ -67,11 +68,13 @@ class KXLootboxCreate extends BaseSubCommand {
 
 		if (!$plugin->getServer()->isOp($sender->getName())) {
 			$sender->sendMessage($config->get("prefix") . " " . $message->get("base-cmd-NoPerm"));
+			KXSoundUtils::send($sender, $sound->get("sound-InvalidAction"));
 			return;
 		}
 	
 		if (!isset($args["lootbox_name"], $args["identifier"])) {
 			$sender->sendMessage($config->get("prefix") . " " . str_replace("{base-cmd}", $config->get("base-cmd"), $config->get("sub-cmd-create-usage")));
+			KXSoundUtils::send($sender, $sound->get("sound-InvalidAction"));
 			return;
 		}
 
@@ -82,6 +85,7 @@ class KXLootboxCreate extends BaseSubCommand {
 			$maxRewards = $config->get("lootbox-max-rewards");
 			if (empty($contents) || (count($contents) + 1) <= $maxRewards) {
 				$sender->sendMessage($config->get("prefix") . " " . str_replace("{max_rewards}", (string) $maxRewards, $message->get("base-cmd-NoContents")));
+				KXSoundUtils::send($sender, $sound->get("sound-InvalidAction"));
 				return;
 			}
 	
@@ -91,8 +95,10 @@ class KXLootboxCreate extends BaseSubCommand {
 	
 			KXSourceUtils::saveKXBoxData($args["identifier"], ["identifier" => $args["identifier"], "name" => $args["lootbox_name"], "contents" => $contents, "lores" => $lores]);
 			$sender->sendMessage($config->get("prefix") . " " . str_replace("{name}", $args["lootbox_name"], str_replace("{identifier}", $args["identifier"], $message->get("base-cmd-Success"))));
+			KXSoundUtils::send($sender, $sound->get("sound-cmd-Create"));
 			return;
 		}
 		$sender->sendMessage($config->get("prefix") . " " . str_replace("{identifier}", $args["identifier"], $message->get("sub-cmd-IdExist")));
+		KXSoundUtils::send($sender, $sound->get("sound-InvalidAction"));
 	}	
 }

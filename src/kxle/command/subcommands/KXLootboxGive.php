@@ -60,26 +60,31 @@ class KXLootboxGive extends BaseSubCommand {
 		$plugin = KXLootbox::getInstance();
 		$config = $plugin->getConfig();
 		$message = KXSourceUtils::getMessages();
+		$sound = KXSourceUtils::getSounds();
 	
 		if (!isset($args["player"], $args["identifier"], $args["amount"])) {
 			$sender->sendMessage($config->get("prefix") . " " . str_replace("{base-cmd}", $config->get("base-cmd"), $config->get("sub-cmd-give-usage")));
+			KXSoundUtils::send($sender, $sound->get("sound-InvalidAction"));
 			return;
 		}
 
 		if (!is_numeric($args["amount"]) || intval($args["amount"]) <= 0) {
 			$sender->sendMessage($config->get("prefix") . " " . $message->get("sub-cmd-InvalidAmount"));
+			KXSoundUtils::send($sender, $sound->get("sound-InvalidAction"));
 			return;
 		}
 		
 		$kxData = KXSourceUtils::getKXBoxData()->get($args["identifier"]);
 		if (!is_array($kxData) || !isset($kxData['identifier']) || $kxData['identifier'] !== $args["identifier"]) {
 			$sender->sendMessage($config->get("prefix") . " " . str_replace("{identifier}", $args["identifier"], $message->get("sub-cmd-NoId")));
+			KXSoundUtils::send($sender, $sound->get("sound-InvalidAction"));
 			return;
 		}		
 
 		$player = $plugin->getServer()->getPlayerExact($args["player"]);
 		if (is_null($player)) {
 			$sender->sendMessage($config->get("prefix") . " " . str_replace("{player_name}", $args["player"], $message->get("sub-cmd-OfflinePlayer")));
+			KXSoundUtils::send($sender, $sound->get("sound-InvalidAction"));
 			return;
 		}
 
@@ -101,10 +106,12 @@ class KXLootboxGive extends BaseSubCommand {
 
 		if (!$inventory->canAddItem($item)) {
 			$sender->sendMessage($config->get("prefix") . " " . $message->get("sub-cmd-NoSpace"));
+			KXSoundUtils::send($sender, $sound->get("sound-InvalidAction"));
 			return;
 		}
 
 		$inventory->addItem($item);
 		$player->sendMessage(str_replace(["{lootbox_name}", "{amount}"], [$kxData['name'], (string) $args["amount"]], $config->get("prefix") . " " . $message->get("sub-cmd-give-Success")));
+		KXSoundUtils::send($sender, $sound->get("sound-cmd-Give"));
 	}	
 }

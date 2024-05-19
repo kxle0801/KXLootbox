@@ -23,34 +23,40 @@
 
 declare(strict_types = 1);
 
-namespace kxle\inventory;
+namespace kxle\utils;
 
-use kxle\utils\KXItemUtils;
-use kxle\utils\KXSourceUtils;
+use kxle\KXLootbox;
 
 use pocketmine\player\Player;
 
-use muqsit\invmenu\InvMenu;
-use muqsit\invmenu\type\InvMenuTypeIds;
+use pocketmine\command\CommandSender;
+use pocketmine\console\ConsoleCommandSender;
 
-class KXLootboxMenu {
+use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 
+final class KXSoundUtils {
+    
     /**
-     * @param Player $player
-     * @param array $kxData
-     * @return void
+     * @param CommandSender $receiver
+     * @param string $sound
+     * @param int $volume
+     * @param int $pitch
      */
-	public static function send(Player $player, array $kxData): void {
-        $menu = InvMenu::create(InvMenuTypeIds::TYPE_DOUBLE_CHEST);
-		$menu->setName("§r§c" . $kxData['name'] . "'s §r§8Preview");
-        $inventory = $menu->getInventory();
-        $sound = KXSourceUtils::getSounds();
+    public static function send(CommandSender $receiver, string $sound, $volume = 1, $pitch = 1): void {
+        if ($receiver instanceof ConsoleCommandSender) return;
 
-        $contents = KXItemUtils::decodeContent($kxData['contents']);
-        foreach ($contents as $content) if (is_string($content)) $inventory->addItem(KXItemUtils::decodeItem($content));
-        KXSoundUtils::send($sender, $sound->get("sound-Close"));
+        $plugin = KXLootbox::getInstance();
+		$config = $plugin->getConfig();
+        if (!$config->get("allow-sounds")) return;
 
-		$menu->setListener(InvMenu::readonly());
-        $menu->send($player);
-	}
+        $location = $receiver->getLocation();
+        $receiver->getNetworkSession()->sendDataPacket(PlaySoundPacket::create(
+            $sound,
+            $location->getX(),
+            $location->getY(),
+            $location->getZ(),
+            $volume,
+            $pitch
+        ));
+    }
 }
