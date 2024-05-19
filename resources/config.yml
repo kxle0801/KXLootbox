@@ -4,7 +4,7 @@
 # - Github: https://github.com/kxle0801
 
 # Do not change the version. RECOMMENDED!
-config-version: 0.1.0
+config-version: 0.1.1
 
 # https://www.digminecraft.com/lists/color_list_pc.php
 # Go to that site to get the preview of colors avaible in Minecraft.
@@ -79,3 +79,7 @@ lootbox-lore:
   - §r§8(§7Left-Click to §cclaim§8)
   - §r§8(§7Right-Click to §cpreview§8)
   - §r§7---
+
+# Setting this to true enables to add a sound along with their action.
+# You can modify sounds at sounds.yml
+allow-sounds: true
