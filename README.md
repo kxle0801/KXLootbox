@@ -132,7 +132,7 @@ REMEMBER: You can customize command name, description, aliases and usage informa
 - [ ] Remove specific item on lootbox
 - [ ] Add Chances for each items
 - [ ] Editable lootbox details
-- [ ] Add Sounds
+- [x] Add Sounds
 
 ## Virions
 - [Commando](https://github.com/CortexPE/Commando) (CortexPE)
