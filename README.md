@@ -101,6 +101,10 @@ lootbox-lore:
   - §r§8(§7Left-Click to §cclaim§8)
   - §r§8(§7Right-Click to §cpreview§8)
   - §r§7---
+
+# Setting this to true enables to add a sound along with their action.
+# You can modify sounds at sounds.yml
+allow-sounds: true
 ```
 
 # Commands
