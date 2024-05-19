@@ -67,7 +67,7 @@ class EventListener implements Listener {
                     $inventorySpace = $config->get("lootbox-max-rewards");
                     if (($inventoryItemsCount + $inventorySpace) > $inventorySize) {
                         $player->sendMessage($config->get("prefix") . " " . $message->get("sub-cmd-NoSpace"));
-                        KXSoundUtils::send($sender, $sound->get("sound-InvalidAction"));
+                        KXSoundUtils::send($player, $sound->get("sound-InvalidAction"));
                         $event->cancel();
                         return;
                     }
@@ -86,14 +86,14 @@ class EventListener implements Listener {
                     }
                     $player->sendMessage($config->get("prefix") . " " . str_replace("{lootbox_name}", $kxData['name'], $message->get("lb-claim-Opened")));
                     $inventory->setItemInHand($item->setCount($item->getCount() - 1));
-                    KXSoundUtils::send($sender, $sound->get("sound-Claimed"));
+                    KXSoundUtils::send($player, $sound->get("sound-Claimed"));
                     $event->cancel();
                     break;
                 case PlayerInteractEvent::LEFT_CLICK_BLOCK:
                     if (!$config->get("lootbox-preview")) return;
 
                     KXLootboxMenu::send($player, $kxData);
-                    KXSoundUtils::send($sender, $sound->get("sound-Preview"));
+                    KXSoundUtils::send($player, $sound->get("sound-Preview"));
                     $event->cancel();
                     break;
                 default:

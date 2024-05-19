@@ -49,14 +49,16 @@ final class KXSoundUtils {
 		$config = $plugin->getConfig();
         if (!$config->get("allow-sounds")) return;
 
-        $location = $receiver->getLocation();
-        $receiver->getNetworkSession()->sendDataPacket(PlaySoundPacket::create(
-            $sound,
-            $location->getX(),
-            $location->getY(),
-            $location->getZ(),
-            $volume,
-            $pitch
-        ));
+        if ($receiver instanceof Player) {
+            $location = $receiver->getLocation();
+            $receiver->getNetworkSession()->sendDataPacket(PlaySoundPacket::create(
+                $sound,
+                $location->getX(),
+                $location->getY(),
+                $location->getZ(),
+                $volume,
+                $pitch
+            ));
+        }
     }
 }

@@ -26,6 +26,7 @@ declare(strict_types = 1);
 namespace kxle\inventory;
 
 use kxle\utils\KXItemUtils;
+use kxle\utils\KXSoundUtils;
 use kxle\utils\KXSourceUtils;
 
 use pocketmine\player\Player;
@@ -48,7 +49,7 @@ class KXLootboxMenu {
 
         $contents = KXItemUtils::decodeContent($kxData['contents']);
         foreach ($contents as $content) if (is_string($content)) $inventory->addItem(KXItemUtils::decodeItem($content));
-        KXSoundUtils::send($sender, $sound->get("sound-Close"));
+        KXSoundUtils::send($player, $sound->get("sound-Close"));
 
 		$menu->setListener(InvMenu::readonly());
         $menu->send($player);
