@@ -15,7 +15,7 @@
 base-cmd-NoConsole: "§r§cThis command can only execute by a player in-game."
 
 # When the sender's inventory is empty.
-base-cmd-NoContents: "§r§cYour inventory needs atleast {max_rewards} item(s) in it to create your lootbox."
+base-cmd-NoContents: "§r§cYour inventory needs atleast {max-rewards} item(s) in it to create your lootbox."
 
 # Notifies the recipient when an item is sent to a player whose inventory is full.
 sub-cmd-NoSpace: "§r§cYou don't have enough space in your inventory!"
@@ -36,16 +36,16 @@ sub-cmd-IdExist: "§r§7You're trying to create §c{identifier} §7identifier th
 sub-cmd-Removed: "§r§7You've successfully deleted §c{identifier} §7lootbox."
 
 # When a sender tries to deliver a lootbox to an unidentified or offline player.
-sub-cmd-OfflinePlayer: "§r§7You're trying to give §c{player_name} §7that is not Online!"
+sub-cmd-OfflinePlayer: "§r§7You're trying to give §c{player-name} §7that is not Online!"
 
 # Sends whenever the sender attempts to execute a value that isn't an integer or number.
 sub-cmd-InvalidAmount: "§r§cYou've input an invalid amount, Atleast 1 is enough."
 
 # Sends after a sender has successfully given a player an item.
-sub-cmd-give-Success: "§r§7You have been given a {lootbox_name} §7x{amount}, Open it now!"
+sub-cmd-give-Success: "§r§7You have been given a {name} §7x{amount}, Open it now!"
 
 # Sends to player when lootbox claimed successfully.
-lb-claim-Opened: "§r§7You've open {lootbox_name} §7and successfully claimed all rewards!"
+lb-claim-Opened: "§r§7You've open {name} §7and successfully claimed all rewards!"
 
 # Sends when Base Command List executed and kxLootbox.yml is empty or no lootboxes are created yet.
 sub-cmd-NoBoxes: "§r§7There's no lootboxes are created, Make one by doing §c/{base_cmd} create §7now!"

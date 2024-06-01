@@ -1,18 +1,18 @@
 name: KXLootbox
-main: kxle\KXLootbox
+main: kxle\Main
 api: 5.15.0
-version: 0.1.0
+version: 0.1.2
 author: KxlePH
 description: "This plugin allows you to make your own Lootbox in-game. Fully Configurable and much more!"
 
 permissions:
-  perm.kxbox.command:
+  permission.command:
     default: op
-  perm.kxbox.command.create:
+  permission.command.create:
     default: op
-  perm.kxbox.command.delete:
+  permission.command.delete:
     default: op
-  perm.kxbox.command.give:
+  permission.command.give:
     default: op
-  perm.kxbox.command.list:
+  permission.command.list:
     default: op

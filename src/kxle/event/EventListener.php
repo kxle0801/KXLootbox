@@ -1,22 +1,5 @@
 <?php
 /*
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this program. If not, see <https://www.gnu.org/licenses/>.
- *
- * For more information about the GNU Lesser General Public License and
- * how it applies to this software, please see the LICENSE file included
- * with this distribution or visit the GNU website at <https://www.gnu.org/>.
- * 
  * Github: https://github.com/kxle0801
  * Author: KxlePH
  */
@@ -25,12 +8,12 @@ declare(strict_types = 1);
 
 namespace kxle\event;
 
-use kxle\KXLootbox;
+use kxle\Main;
 
-use kxle\utils\KXItemUtils;
-use kxle\utils\KXSoundUtils;
-use kxle\utils\KXSourceUtils;
-use kxle\inventory\KXLootboxMenu;
+use kxle\utils\ItemUtils;
+use kxle\utils\SoundUtils;
+use kxle\utils\SourceUtils;
+use kxle\inventory\LootboxMenu;
 
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerInteractEvent;
@@ -46,28 +29,28 @@ class EventListener implements Listener {
         $item = $event->getItem();
         $tag = $item->getNamedTag();
         
-        if ($tag->getTag(KXItemUtils::TAG_KXBOX) && $tag->getTag(KXItemUtils::TAG_KXBOX_IDENTIFIER)) {
-            $plugin = KXLootbox::getInstance();
+        if ($tag->getTag(ItemUtils::TAG_LOOTBOX) && $tag->getTag(ItemUtils::TAG_LOOTBOX_IDENTIFIER)) {
+            $plugin = Main::getInstance();
 		    $config = $plugin->getConfig();
-            $message = KXSourceUtils::getMessages();
-            $sound = KXSourceUtils::getSounds();
+            $message = SourceUtils::getMessages();
+            $sound = SourceUtils::getSounds();
             
-            $kxBoxIdentifier = $tag->getTag(KXItemUtils::TAG_KXBOX_IDENTIFIER)->getValue();
-            $kxData = KXSourceUtils::getKXBoxData()->get($kxBoxIdentifier);
+            $lootboxIdentifier = $tag->getTag(ItemUtils::TAG_LOOTBOX_IDENTIFIER)->getValue();
+            $lootboxData = SourceUtils::getLootboxData()->get($lootboxIdentifier);
 
-            if (!is_array($kxData)) return;
+            if (!is_array($lootboxData)) return;
 
             $inventory = $player->getInventory();
             $inventorySize = $inventory->getSize();
             $inventoryItemsCount = count($inventory->getContents());
-            $contents = KXItemUtils::decodeContent($kxData['contents']);
+            $contents = ItemUtils::decodeContent($lootboxData['contents']);
             
             switch ($action) {
                 case PlayerInteractEvent::RIGHT_CLICK_BLOCK:
                     $inventorySpace = $config->get("lootbox-max-rewards");
                     if (($inventoryItemsCount + $inventorySpace) > $inventorySize) {
                         $player->sendMessage($config->get("prefix") . " " . $message->get("sub-cmd-NoSpace"));
-                        KXSoundUtils::send($player, $sound->get("sound-InvalidAction"));
+                        SoundUtils::send($player, $sound->get("sound-InvalidAction"));
                         $event->cancel();
                         return;
                     }
@@ -77,23 +60,26 @@ class EventListener implements Listener {
                     $maxRewards = 0;
                     foreach ($contents as $content) {
                         if (is_string($content)) {
-                            $kxBoxItem = KXItemUtils::decodeItem($content);
-                            $inventory->addItem($kxBoxItem);
+                            $lootboxItem = ItemUtils::decodeItem($content);
+                            $inventory->addItem($lootboxItem);
                             $maxRewards++;
                             
                             if ($maxRewards >= $config->get("lootbox-max-rewards")) break;
                         }
                     }
-                    $player->sendMessage($config->get("prefix") . " " . str_replace("{lootbox_name}", $kxData['name'], $message->get("lb-claim-Opened")));
+                    $player->sendMessage($config->get("prefix") . " " . str_replace("{name}", $lootboxData['name'], $message->get("lb-claim-Opened")));
                     $inventory->setItemInHand($item->setCount($item->getCount() - 1));
-                    KXSoundUtils::send($player, $sound->get("sound-Claimed"));
+                    SoundUtils::send($player, $sound->get("sound-Claimed"));
                     $event->cancel();
                     break;
                 case PlayerInteractEvent::LEFT_CLICK_BLOCK:
-                    if (!$config->get("lootbox-preview")) return;
+                    if (!$config->get("lootbox-preview")) {
+                        $event->cancel();
+                        return;
+                    }
 
-                    KXLootboxMenu::send($player, $kxData);
-                    KXSoundUtils::send($player, $sound->get("sound-Preview"));
+                    LootboxMenu::send($player, $lootboxData);
+                    SoundUtils::send($player, $sound->get("sound-Preview"));
                     $event->cancel();
                     break;
                 default:
