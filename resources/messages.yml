@@ -1,0 +1,51 @@
+# KXLootbox Configuration.
+# KXLootbox Github: https://github.com/kxle0801/KXLootbox
+# Author: KxlePH
+# - Github: https://github.com/kxle0801
+
+# NOTE: Every message can be modify under "" but other than that
+# is not, If error occured on this YML please DELETE
+# messages.yml in plugin_data/KXLootbox/messages.yml and restart your server.
+
+# https://www.digminecraft.com/lists/color_list_pc.php
+# Go to that site to get the preview of colors avaible in Minecraft.
+# Use this '§' to declare a color.
+
+# Sends upon Base Command execution by Consol.
+base-cmd-NoConsole: "§r§cThis command can only execute by a player in-game."
+
+# When the sender's inventory is empty.
+base-cmd-NoContents: "§r§cYour inventory needs atleast {max-rewards} item(s) in it to create your lootbox."
+
+# Notifies the recipient when an item is sent to a player whose inventory is full.
+sub-cmd-NoSpace: "§r§cYou don't have enough space in your inventory!"
+
+# Transmits using the Base Command when the sender lacks authorization.
+base-cmd-NoPerm: "§r§cYou've no permission to execute this command!"
+
+# Sends upon successful execution of the sender Base Command.
+base-cmd-Success: "§r§7You've created §a{identifier} §7with a name of §r{name}§7 successfully."
+
+# When attempts to provide a identifier that is unidentified lootbox.
+sub-cmd-NoId: "§r§7You're trying to get §c{identifier} §7identifier that is not existing."
+
+# When attempts to provide a identifier that is already created.
+sub-cmd-IdExist: "§r§7You're trying to create §c{identifier} §7identifier that is already created."
+
+# Sends when lootbox with the identifier has been deleted successfully.
+sub-cmd-Removed: "§r§7You've successfully deleted §c{identifier} §7lootbox."
+
+# When a sender tries to deliver a lootbox to an unidentified or offline player.
+sub-cmd-OfflinePlayer: "§r§7You're trying to give §c{player-name} §7that is not Online!"
+
+# Sends whenever the sender attempts to execute a value that isn't an integer or number.
+sub-cmd-InvalidAmount: "§r§cYou've input an invalid amount, Atleast 1 is enough."
+
+# Sends after a sender has successfully given a player an item.
+sub-cmd-give-Success: "§r§7You have been given a {name} §7x{amount}, Open it now!"
+
+# Sends to player when lootbox claimed successfully.
+lb-claim-Opened: "§r§7You've open {name} §7and successfully claimed all rewards!"
+
+# Sends when Base Command List executed and kxLootbox.yml is empty or no lootboxes are created yet.
+sub-cmd-NoBoxes: "§r§7There's no lootboxes are created, Make one by doing §c/{base_cmd} create §7now!"
