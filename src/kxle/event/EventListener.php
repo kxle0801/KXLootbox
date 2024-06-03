@@ -16,6 +16,9 @@ use kxle\utils\SourceUtils;
 use kxle\inventory\LootboxMenu;
 
 use pocketmine\event\Listener;
+
+use pocketmine\event\block\BlockBreakEvent;
+
 use pocketmine\event\player\PlayerInteractEvent;
 
 class EventListener implements Listener {
@@ -82,5 +85,17 @@ class EventListener implements Listener {
                     break;
             }
         }
+    }
+
+    /**
+     * @param BlockBreakEvent $event
+     */
+    public function onBreak(BlockBreakEvent $event): void {
+        $player = $event->getPlayer();
+        $inventory = $player->getInventory();
+        $item = $inventory->getItemInHand();
+        $tag = $item->getNamedTag();
+        
+        if ($tag->getTag(ItemUtils::TAG_LOOTBOX) && $tag->getTag(ItemUtils::TAG_LOOTBOX_IDENTIFIER)) $event->cancel();
     }    
 }
