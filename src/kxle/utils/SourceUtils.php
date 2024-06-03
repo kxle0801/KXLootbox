@@ -10,6 +10,8 @@ namespace kxle\utils;
 
 use kxle\Main;
 
+use kxle\command\LootboxCommand;
+
 use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat as TF;
 
