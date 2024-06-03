@@ -10,7 +10,7 @@ config-version: 0.1.1
 # Go to that site to get the preview of colors avaible in Minecraft.
 # Use this '§' to declare a color.
 # You can change this prefix as you want. Leave "" if don't want it.
-prefix: "cr§8[§4KXL§coot§fbox§8]§r"
+prefix: "§8[§4KXL§coot§fbox§8]§r"
 
 # Base command for executing the plugin command.
 base-cmd: "lootbox"
