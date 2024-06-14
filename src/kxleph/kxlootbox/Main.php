@@ -6,7 +6,7 @@
 
 declare(strict_types = 1);
 
-namespace kxle;
+namespace kxleph\kxlootbox;
 
 use kxleph\kxlootbox\event\EventListener;
 
