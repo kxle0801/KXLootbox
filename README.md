@@ -128,7 +128,7 @@ REMEMBER: You can customize command name, description, aliases and usage informa
 # TODO
 - 🔴 Animations per lootbox
 - 🔴 Titles or Popups
-- 🔴 Remove specific item on lootbox
+- 🟢 Remove specific item on lootbox
 - 🔴 Add Chances for each items
 - 🔴 Editable lootbox details
 - 🟢 Add Sounds
