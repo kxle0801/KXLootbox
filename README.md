@@ -139,6 +139,6 @@ REMEMBER: You can customize command name, description, aliases and usage informa
 
 ## Get In Touch
 [![YOUTUBE](https://img.shields.io/badge/KxlePH-white?logo=youtube&logoColor=red&label=Youtube&labelColor=white&color=red)](https://www.youtube.com/@kxle-ph)
-[![DISCORD](https://img.shields.io/badge/Elysium_Community-black?logo=discord&logoColor=white&label=Discord&labelColor=%235b209a&color=white)](https://discord.gg/vhnRSH7k)
+[![DISCORD](https://img.shields.io/badge/Elysium_Community-black?logo=discord&logoColor=white&label=Discord&labelColor=%237289da&color=white)](https://discord.gg/vhnRSH7k)
 <br>
 - Credits to original concept ❤️
