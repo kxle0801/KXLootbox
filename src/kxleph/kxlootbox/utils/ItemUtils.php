@@ -9,11 +9,12 @@ declare(strict_types = 1);
 namespace kxleph\kxlootbox\utils;
 
 use pocketmine\data\bedrock\EnchantmentIdMap;
-
 use pocketmine\item\Item;
 use pocketmine\item\enchantment\EnchantmentInstance;
-
 use pocketmine\block\VanillaBlocks;
+use pocketmine\nbt\LittleEndianNbtSerializer;
+use pocketmine\nbt\TreeRoot;
+use pocketmine\item\StringToItemParser;
 
 final class ItemUtils {
 
@@ -49,18 +50,26 @@ final class ItemUtils {
      */
     public static function encodeContent(array $contents): string {
         $lootboxItems = [];
-		foreach ($contents as $content) $lootboxItems[] = self::encodeItem($content);
-		return json_encode($lootboxItems);
+        foreach ($contents as $content) $lootboxItems[] = self::encodeItem($content);
+        return json_encode($lootboxItems);
     }
 
     /**
-     * @param string $kxBoxData
+     * @param string $lootboxData
      * @return array|null
      */
     public static function decodeContent(string $lootboxData): ?array {
-		$lootboxItems = json_decode($lootboxData);
+        $lootboxItems = json_decode($lootboxData);
         if (!is_null($lootboxItems)) return $lootboxItems;
         return null;
+    }
+
+    /**
+     * @param string $item
+     * @return Item
+     */
+    public static function getItem(string $item): Item {
+        return StringToItemParser::getInstance()->parse($item);
     }
 
     /**
@@ -68,30 +77,16 @@ final class ItemUtils {
      * @return string
      */
     public static function encodeItem(Item $item): string {
-        return base64_encode(gzcompress(self::itemToJson($item)));
+        $serializer = new LittleEndianNbtSerializer();
+        return base64_encode(gzcompress($serializer->write(new TreeRoot($item->nbtSerialize()))));
     }
-
+    
     /**
-     * @param string $item
+     * @param string $data
      * @return Item
      */
-    public static function decodeItem(string $item): Item {
-        return self::jsonToItem(gzuncompress(base64_decode($item)));
-    }
-
-    /**
-     * @param Item $item
-     * @return string
-     */
-    public static function itemToJson(Item $item): string {
-        return base64_encode(serialize((clone $item)->nbtSerialize()));
-    }
-
-    /**
-     * @param string $json
-     * @return Item
-     */
-    public static function jsonToItem(string $json): Item {
-        return Item::nbtDeserialize(unserialize(base64_decode($json)));
+    public static function decodeItem(string $data): Item {
+        $serializer = new LittleEndianNbtSerializer();
+        return Item::nbtDeserialize($serializer->read(gzuncompress(base64_decode($data)))->mustGetCompoundTag());
     }
 }
